@@ -1,0 +1,23 @@
+<h1>Listing phlogs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @phlogs.each do |phlog| %>
+  <tr>
+    <td><%= phlog.name %></td>
+    <td><%= link_to 'Show', phlog %></td>
+    <td><%= link_to 'Edit', edit_phlog_path(phlog) %></td>
+    <td><%= link_to 'Destroy', phlog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Phlog', new_phlog_path %>

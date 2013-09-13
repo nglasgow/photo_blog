@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @phlog.name %>
+</p>
+<div class="phlog">
+  <%= image_tag @phlog.image_url(:thumb).to_s %>
+</div>
+
+<%= link_to 'Edit', edit_phlog_path(@phlog) %> |
+<%= link_to 'Back', phlogs_path %>
