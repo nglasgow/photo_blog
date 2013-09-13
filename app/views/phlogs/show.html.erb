@@ -9,4 +9,5 @@
 </div>
 
 <%= link_to 'Edit', edit_phlog_path(@phlog) %> |
-<%= link_to 'Back', phlogs_path %>
+<%= link_to 'Destroy', phlog, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back to Phlogs', phlogs_path %>

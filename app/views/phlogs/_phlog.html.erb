@@ -1,0 +1,12 @@
+<div class="phlog">
+  <% if phlog.image_processed? %>
+    <%= link_to image_tag(phlog.image_url(:thumb)), phlog if phlog.image? %>
+  <% else %>
+    <em>Processing...</em>
+  <% end %>
+  <div class="name"><%= phlog.name %></div>
+  <div class="actions">
+    <%= link_to "edit", edit_phlog_path(phlog) %> |
+    <%= link_to "remove", phlog, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+</div>

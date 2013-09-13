@@ -3,11 +3,8 @@ class PhlogsController < ApplicationController
   # GET /phlogs.json
   def index
     @phlogs = Phlog.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @phlogs }
-    end
+    @uploader = Phlog.new.image
+    @uploader.success_action_redirect = new_phlog_url
   end
 
   # GET /phlogs/1
@@ -24,12 +21,7 @@ class PhlogsController < ApplicationController
   # GET /phlogs/new
   # GET /phlogs/new.json
   def new
-    @phlog = Phlog.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @phlog }
-    end
+    @phlog = Phlog.new(key: params[:key])
   end
 
   # GET /phlogs/1/edit

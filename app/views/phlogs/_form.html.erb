@@ -10,13 +10,13 @@
       </ul>
     </div>
   <% end %>
+  <%= f.hidden_field :key %>
+
+  <p>File: <%= @phlog.image_name %></p>
 
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>

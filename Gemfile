@@ -26,6 +26,8 @@ end
 gem 'jquery-rails'
 gem 'better_errors'
 gem 'dotenv-rails'
+gem 'carrierwave_direct'
+gem 'sidekiq'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,23 +1,11 @@
-<h1>Listing phlogs</h1>
+<h1>List of Phlogs</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="phlogs">
+  <%= render @phlogs %>
+</div>
+<div class="clear"></div>
 
-<% @phlogs.each do |phlog| %>
-  <tr>
-    <td><%= phlog.name %></td>
-    <td><%= link_to 'Show', phlog %></td>
-    <td><%= link_to 'Edit', edit_phlog_path(phlog) %></td>
-    <td><%= link_to 'Destroy', phlog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<%= direct_upload_form_for @uploader do |f| %>
+  <p><%= f.file_field :image %></p>
+  <p><%= f.submit "Upload Image" %></p>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Phlog', new_phlog_path %>
