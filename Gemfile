@@ -29,6 +29,7 @@ gem 'better_errors'
 gem 'dotenv-rails'
 gem 'carrierwave_direct'
 gem 'sidekiq'
+gem 'unicorn'
 
 gem 'rails_12factor', group: :production
 
