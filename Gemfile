@@ -30,6 +30,7 @@ gem 'dotenv-rails'
 gem 'carrierwave_direct'
 gem 'sidekiq'
 gem 'unicorn'
+gem 'newrelic_rpm'
 
 gem 'rails_12factor', group: :production
 
