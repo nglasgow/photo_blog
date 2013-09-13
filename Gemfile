@@ -9,6 +9,7 @@ gem 'fog'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -28,6 +29,10 @@ gem 'better_errors'
 gem 'dotenv-rails'
 gem 'carrierwave_direct'
 gem 'sidekiq'
+
+gem 'rails_12factor', group: :production
+
+ruby '2.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
